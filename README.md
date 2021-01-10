@@ -1,2 +1,2 @@
 # JavaScript-Projects
-Projects on the JavaScript course
+This repository contains all of the projects I have completed on the JavaScript course at the Tech Academy.
