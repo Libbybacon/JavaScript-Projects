@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="JS/main.js"></script>
+    </head>
+    
+    <body>
+    
+    <!--making buttons to display results of JavaScript functions-->
+                <!--DATA TYPES-->
+        <h3>Click the buttons below to see which data type each represents:</h3>
+    
+        <button id="string" onclick="type_string()">some words</button>
+
+        <button id="number" onclick="type_number()">314</button>
+
+        <button id="boolean" onclick="type_boolean()">False</button>
+
+        <button id="NaN" onclick="type_NaN()">11/0</button><br>
+        <br>
+
+                  <!-----isNaN FUNCTION---->
+    
+        <h4>Testing the isNaN function:</h4>
+    
+        <p>True or false? The word "number" is not a number. 
+
+            <button id="true" onclick="yesNaN()">Answer</button>
+        </p><br>  
+    
+        <p>True or false? The integer 27 is not a number.
+            <button id="false" onclick="noNaN()">Answer</button>
+        </p><br>
+
+                <!--INFINITY AND NEGATIVE INFINITY-->
+
+        <h4>Infinity and negative infinity:</h4>
+
+        <p>The number 3E333 is so large, when entered in the computer it is displayed as 
+            <button id="posinfinity" onclick="infinity()">???</button> </p>
+        <p>And...</p>
+        <p>The number -3E333 is displayed as 
+            <button id="neginfinity" onclick="negInfinity()">???</button>
+        </p><br>
+
+                    <!-------BOOLEANS--------->
+
+        <h4>Booleans</h4>
+        
+        <p>True or False? 8 is greater than 5 and less than 10...
+            <button id="true_boolean" onclick="yesBoolean()">???</button>
+        </p>
+
+        <p>True or False? 13 x 7 is less than or equal to 90...
+            <button id="false_boolean" onclick="noBoolean()">???</button>
+        </p><br>
+
+                    <!-------COERCION---------->
+        
+        <h4>Coercion</h4>
+        
+        <p>What happens when I add the string "15" to the number 12...
+            <button id="coerced" onclick="coercion()">???</button>
+        </p><br>
+
+                    <!-------COMPARISONS-------->
+        
+        <h4>Comparisons</h4>
+        
+        <p>True or False? 36 divded by 3 is equal to 6 multiplied by 2...
+            <button id="equal" onclick="isEqual()">???</button>
+        </p>
+    
+        <p>True or False? The product of 17 and 4 divided by 9 is equal to double the quotient of 196 and 13...
+            <button id="not_equal" onclick="notEqual()">???</button>
+        </p><br>
+
+                    <!-----TRIPLE EQUAL SIGNS---->
+        <h4>Using triple equal signs to compare values</h4>
+
+        <p>True or False? The string "banana" is equal to the string "banana"...
+            <button id="fullMatch" onclick="fullMatch()">???</button>
+        </p>
+
+        <P>True or False? The number 8 is equal to the string "dog"...
+            <button id="fullDifferent" onclick="fullDifferent()">???</button>
+        </P>
+
+        <p>True or False? The string "10" is equal to the number 10...
+            <button id="sameValue" onclick="sameValue()">???</button>
+        </p>
+
+        <p>True or False? The number 7 is equal to the number 77...
+            <button id="sameData" onclick="sameData()">???</button>
+        </p><br>
+
+                    <!----AND, OR OPERATORS---->
+        
+        <h4>AND and OR operators</h4>
+
+        <p>True or False? 7 x 8 equals 14 x 4 AND 10 x 10 equals 25 x 4...
+            <button id="andTrue" onclick="andTrue()">???</button>
+        </p>
+
+        <p>True or False? The number 18 equals the product of the numbers 6 and 3, AND the number 18 is equal to the string "eighteen"...
+            <button id="andFalse" onclick="andFalse()">???</button>
+        </p>
+
+        <p>True or False? The number 24 is equal to 48 divided by 2 OR the number 24 is equal to 12 plus 13...
+            <button id="orTrue" onclick="orTrue()">???</button>
+        </p>
+
+        <p>True or False?  The string "apples" is equal to the string "fruit" OR the string "apples" is equal to the number 100...
+            <button id="orFalse" onclick="orFalse()">???</button>
+        </p><br>
+
+                    <!-------NOT OPERATOR------>
+        
+        <h4>NOT operator</h4>
+        <p>True or False? 5 x 3 is not greater than or equal to 16...
+            <button id="notTrue" onclick="notTrue()">???</button>
+        </p>
+
+        <p>True or False? 4 x 3 is not greater than 33 divided by 3...
+            <button id="notFalse" onclick="notFalse()">???</button>
+        </p><br>
+
+    
+    </body>
+</html>
