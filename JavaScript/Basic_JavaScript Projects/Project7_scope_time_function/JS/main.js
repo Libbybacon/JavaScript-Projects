@@ -38,17 +38,17 @@ function my_Number() {  //Create, name function
     document.getElementById("answer").innerHTML = Answer; //Display one of two values for Answer in HTML doc
 }
 
-function timeOfDay() {
-    var Time = new Date().getHours();
-    var Answer;
+function timeOfDay() { //Create and name function
+    var Time = new Date().getHours(); //Declare variable Time and assign value 
+    var Answer; //Declare variable Answer
     if (Time < 12 == Time > 0) {
         Answer = "It's the morning!"
-    }
+    }                                       //Using if, else if, and else statements to create values for variable Answer
     else if (Time > 12 == Time < 18) {
         Answer = "It's the afternoon!"
     }
     else {
         Reply = "It's nighttime!"
     }
-    document.getElementById("Time").innerHTML = Reply;
+    document.getElementById("Time").innerHTML = Reply; //Assign appropriate value of Reply to element "Time" and display in doc
 }
