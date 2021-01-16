@@ -62,13 +62,30 @@ document.getElementById("fruit3").innerHTML = "<br>" + A //Display value of vari
 
 //=========== RETURN STATEMENT ===========//
 
-var A = document.getElementById("num1").value;
-var B = document.getElementById("num2").value;
-var C = document.getElementById("num3").value;
-
-var D = equationFunction(A, B, C);
-
-function equationFunction(x, y, z) {
-    return x * y - z;
+function showResult() { //Create function 'showResult'
+    var A = document.getElementById("num1").value; 
+    var B = document.getElementById("num2").value;   //Declare local variables and assign them values of inputs in the doc
+    var C = document.getElementById("num3").value;
+    var D = equationFunction(A, B, C);  //Declare local variable and assign it the return value of the function 'equationFunction'
+    document.getElementById("result").innerHTML = A + " times " + B + " divided by " 
+                                                + C + " equals: " + D; //Displaying strings and variable values in doc
 }
-document.getElementById("result").innerHTML = A + " times " + B + " divided by " + C + " equals " + D;
+function equationFunction(x, y, z) { //Create function 'equationFunction' and assign it parameters x,y,z
+    var D = x * y / z;  //Assign equation to value of variable D
+    return D; //Return the result of the equation assigned to variable D
+}
+
+//=============== OBJECTS ===============//
+function catFunction() { //Create function 'catFunction'
+    let cat = {  //Declare object 'cat' with block scope
+        name: "Topanga", 
+        color: "grey",      //Assign characteristics with values to object 'cat'
+        breed: "tabby",
+        age: "4",
+        about: function() { //assign a function value to 'about' characteristic of object 'cat'
+            return this.name + " is a " + this.age + " year old " 
+            + this.color + " " + this.breed + " cat."; //Have function return value of strings and characteristic values
+     }
+    };
+    document.getElementById("about").innerHTML = cat.about(); //Display value of 'about' characteristic of 'cat' object in doc
+}
