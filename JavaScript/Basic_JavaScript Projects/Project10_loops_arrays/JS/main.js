@@ -67,12 +67,11 @@ function showResult() { //Create function 'showResult'
     var B = document.getElementById("num2").value;   //Declare local variables and assign them values of inputs in the doc
     var C = document.getElementById("num3").value;
     var D = equationFunction(A, B, C);  //Declare local variable and assign it the return value of the function 'equationFunction'
-    document.getElementById("result").innerHTML = A + " times " + B + " divided by " 
-                                                + C + " equals: " + D; //Displaying strings and variable values in doc
+    document.getElementById("result").innerHTML = A + " times " + B + " divided by " + C + " equals: " + D; //Displaying strings and variable values in doc
 }
 function equationFunction(x, y, z) { //Create function 'equationFunction' and assign it parameters x,y,z
-    var D = x * y / z;  //Assign equation to value of variable D
-    return D; //Return the result of the equation assigned to variable D
+    var S = x * y / z;  //Assign equation to value of variable S
+    return S; //Return the result of the equation assigned to variable S
 }
 
 //=============== OBJECTS ===============//
@@ -88,4 +87,35 @@ function catFunction() { //Create function 'catFunction'
      }
     };
     document.getElementById("about").innerHTML = cat.about(); //Display value of 'about' characteristic of 'cat' object in doc
+}
+
+//============ BREAK STATEMENT ===========//
+
+//Break statement jumps out of a loop when a condition is met, 
+ //continues executing code after loop
+
+ function breakFunction() { //Create function 'breakFunction
+     let letters = ["S", "T", "O", "P", " ", "N", "O", "W", " ", 4, "R", "E", "A", "L"]; // Assign array to value of variable 'letters'
+     var text = ""; //Declare local variable 'text'
+     var i; //Declare local variable 'i'
+     for (i = 0; i < letters.length; i ++){  //Set conditions for for loop
+        if (letters[i] === 4) {break;} //Set condition for breaking out of loop
+         text += letters[i];
+    }
+    document.getElementById("broken").innerHTML = text; //Display value of variable 'text' in document
+ }
+
+ //========== CONTINUE STATEMENT ==========//
+ //Skips over one iteration of loop that meets specific conditions, continues to next iterations
+
+ function skipFunction() {
+     let words = ["This ", "is ", "not ", "how ", "the ", "don't ", "skip ", "not ", "function ", "works!"];
+     var sentence = "";
+     var i;
+     for(i = 0; i < words.length; i++){
+        if (words[i] === "not ") {continue;}    
+        if (words[i] === "don't ") {continue;}
+     sentence += words[i];
+    }
+    document.getElementById("skipped").innerHTML = sentence;
 }
