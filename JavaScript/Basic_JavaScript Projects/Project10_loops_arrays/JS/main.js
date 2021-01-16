@@ -108,14 +108,14 @@ function catFunction() { //Create function 'catFunction'
  //========== CONTINUE STATEMENT ==========//
  //Skips over one iteration of loop that meets specific conditions, continues to next iterations
 
- function skipFunction() {
-     let words = ["This ", "is ", "not ", "how ", "the ", "don't ", "skip ", "not ", "function ", "works!"];
-     var sentence = "";
-     var i;
-     for(i = 0; i < words.length; i++){
+ function skipFunction() { //Create function 'skipFunction
+     let words = ["This ", "is ", "not ", "how ", "the ", "don't ", "skip ", "not ", "function ", "works!"]; //Assign array value to variable 'words'
+     var sentence = ""; //Declare variable 'sentence'
+     var i;     //Declare variable 'i'
+     for(i = 0; i < words.length; i++){  //Create conditions for for loop
         if (words[i] === "not ") {continue;}    
-        if (words[i] === "don't ") {continue;}
-     sentence += words[i];
+        if (words[i] === "don't ") {continue;} //Set conditions for continue statements
+     sentence += words[i]; //Add values to 'sentence' value
     }
-    document.getElementById("skipped").innerHTML = sentence;
+    document.getElementById("skipped").innerHTML = sentence; //Display value of 'sentence' in doc
 }
