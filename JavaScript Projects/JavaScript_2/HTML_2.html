@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="CSS/CSS_2.css">
+        <script src="JS/JavaScript_2.js"></script>
+    </head>
+    <body>
+        <h3>BASIC FORM</h3>
+        
+        <form name="basicForm" action="/action_page.php" 
+            onsubmit="return validateForm()" method="post">
+            
+            <label >First name:</label><br> 
+            <input name="firstName" type="text" ><br>
+            <label >Last name:</label><br>
+            <input name="lastName"  type="text" ><br>
+            <label>Birthday:</label><br>
+            <input name="birthday" type="date"><br>
+            <label >Email:</label><br>
+            <input name="email" type="text"><br>
+            <input  type="submit" value="SUBMIT">
+        </form>
+        <P>Browser will display error message if all fields are not filled properly</P>
+        
+    </body>
+</html>
