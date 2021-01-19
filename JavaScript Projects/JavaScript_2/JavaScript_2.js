@@ -1,4 +1,7 @@
-function validateForm() {
+function validateForm() {//Create function "validateForm"
+    //Declaring variables and assigning the values of inputs in the doc
+    //Using if statement to set condition that if no value is entered in input to 
+    //Show an alert
     var fname = document.forms["basicForm"]["firstName"].value;
     if (fname =="") {
         alert("Please enter a first name");
@@ -19,5 +22,4 @@ function validateForm() {
         alert("Please enter an email address");
         return false;
     }
-
 }

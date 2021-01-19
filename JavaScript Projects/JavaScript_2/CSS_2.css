@@ -1,4 +1,7 @@
 
+body {
+    text-align: center;
+}
 
 input[type=text] {
     width: 75%;
@@ -41,9 +44,10 @@ input[type=submit] {
 }
 
 form {
+    margin-left: 36.5%;
     color: rgb(219, 215, 215);
     width: 25%;
-    border-radius: 8px;
+    border-radius: 15px;
     border: 2px solid rgb(240, 210, 40);
     background-color:#100349;
     padding: 10px;
