@@ -14,11 +14,11 @@ function placeXOrO(squareNumber) {
         //This condition checks whose turn it is.
         if (activePlayer === 'X') {
             //If activePlayer is equal to 'X', the x.png is placed in HTML
-            select.style.backgroundImage = 'url("./Images/x.png")';
+            select.style.backgroundImage = 'url("./Images/dog.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //If activePlayer is equal to 'O', the o.png is placed in HTML
-            select.style.backgroundImage = 'url("./Images/o.png")';
+            select.style.backgroundImage = 'url("./Images/bunny.jpg")';
         } 
         //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -34,7 +34,11 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
         //This function plays placement sound.
-        audio('Media/place.mp3');
+        if (activePlayer === 'X') {
+            audio('Media/bounce.wav');
+        } else {
+            audio('Media/bark.wav');
+        }
         //This condition checks to see if it is computer's turn.
         if(activePlayer === 'O') {
             //This function disables clicking for computer choice.
@@ -107,7 +111,7 @@ function checkWinConditions() {
     //and 9 squares are selected, the code executes.
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
-        audio('./Media/tie.mp3');
+        audio('Media/tie.mp3');
         //This function sets a .3 second timer before the resetGame is called
         setTimeout(function() {resetGame(); }, 1000);
     }
@@ -178,7 +182,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This method draws everything we laid out above
         c.stroke();
         //This condition checks if we've reached the endpoint
-        if (x1 <= x2 && y1 >= y2) {
+        if (x1 <= x2 && y1 <= y2) {
             //This condition adds 10 to the previous end x point
             if (x < x2) { x += 10; }
             //This condition adds 10 to the previous end y point
@@ -207,7 +211,11 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing
     disableClick();
     //This line plays the win sounds
-    audio('./Media/winGame.mp3');
+    if (activePlayer === 'X') {
+         audio('./Media/Howl.mp3');
+    } else { 
+        audio('./Media/place.mp3');
+    }     
     //This line calls our main animation loop
     animateLineDrawing();
     //This line waits 1 second
