@@ -212,9 +212,9 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     disableClick();
     //This line plays the win sounds
     if (activePlayer === 'X') {
-         audio('./Media/Howl.mp3');
+         audio('./Media/howl.mp3');
     } else { 
-        audio('./Media/place.mp3');
+        audio('./Media/bounce.wav');
     }     
     //This line calls our main animation loop
     animateLineDrawing();
