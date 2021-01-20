@@ -13,11 +13,11 @@ function placeXOrO(squareNumber) {
         let select = document.getElementById(squareNumber);
         //This condition checks whose turn it is.
         if (activePlayer === 'X') {
-            //If activePlayer is equal to 'X', the x.png is placed in HTML
+            //If activePlayer is equal to 'X', the dog.png is placed in HTML
             select.style.backgroundImage = 'url("./Images/dog.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
-            //If activePlayer is equal to 'O', the o.png is placed in HTML
+            //If activePlayer is equal to 'O', the bunny.jpg is placed in HTML
             select.style.backgroundImage = 'url("./Images/bunny.jpg")';
         } 
         //squareNumber and activePlayer are concatenated together and added to array.
@@ -35,9 +35,9 @@ function placeXOrO(squareNumber) {
         }
         //This function plays placement sound.
         if (activePlayer === 'X') {
-            audio('Media/bounce.wav');
+            audio('Media/bounce.wav');//Actually plays when 'O' places piece
         } else {
-            audio('Media/bark.wav');
+            audio('Media/bark.wav');//Actually plays when 'X' places piece
         }
         //This condition checks to see if it is computer's turn.
         if(activePlayer === 'O') {
@@ -111,7 +111,7 @@ function checkWinConditions() {
     //and 9 squares are selected, the code executes.
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
-        audio('Media/tie.mp3');
+        audio('./Media/meh.mp3');
         //This function sets a .3 second timer before the resetGame is called
         setTimeout(function() {resetGame(); }, 1000);
     }
@@ -211,11 +211,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing
     disableClick();
     //This line plays the win sounds
-    if (activePlayer === 'X') {
-         audio('./Media/howl.mp3');
-    } else { 
-        audio('./Media/bounce.wav');
-    }     
+    audio('./Media/win.wav');
     //This line calls our main animation loop
     animateLineDrawing();
     //This line waits 1 second
