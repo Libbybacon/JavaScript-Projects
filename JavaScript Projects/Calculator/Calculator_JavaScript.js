@@ -1,4 +1,4 @@
-// Creates an object to keep track of values
+// Creates an object to keep track of values (Global scope)
 const Calculator = {
     // This displays 0 on the screen
     Display_Value: '0',
@@ -11,24 +11,31 @@ const Calculator = {
     operator: null,    
 };
 
-// This modifies values each time a button is clicked
+// This modifies values each time a button is clicked//
+// Create the function Input_Digit with parameter digit
 function Input_Digit(digit) {
+    // Assign values of Display_Value and Wait_Second_Operator to Calculator
     const { Display_Value, Wait_Second_Operand } = Calculator;
     // We are checking to see if Wait_Second_Operand is true and
     // set Display_Value to the key that was clicked
     if (Wait_Second_Operand === true) {
-        Calculator.Display_Value = digit;
-        Calculator.Wait_Second_Operand = false;
+        Calculator.Display_Value = digit; // Display_Value for calculator equals value of digit if there is a second operand
+        Calculator.Wait_Second_Operand = false; //Return value of Second_Operand to false
     } else {
         // This overwrites Display_Value if the current value is 0
         //otherwise it adds on to it
+
+        //*******Is this for entering numbers that are two or more digits long?****
         Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
-// This section handles decimal points
+// This section handles decimal points//
+// Create the function Input_Decimal with the parameter dot
 function Input_Decimal(dot) {
     // This ensures that accidental clicking of the decimal point
     // doesn't cause bugs in operation
+
+    //*****how would accidentally clicking decimal cause bugs?*******
     if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
         // We are saying that if the Display_Value does not contain a decimal point
@@ -39,6 +46,7 @@ function Input_Decimal(dot) {
 
 // This section handles operators
 function Handle_Operator(Next_Operator) {
+    // 
     const { First_Operand, Display_Value, operator } = Calculator
     // When an operator key is pressed, we convert the current number
     // displayed on the screen to a number and then store the result in 
@@ -73,9 +81,11 @@ const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
-    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand
+    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
+// Function returns Calculator values to original values
 function Calculator_Reset() {
     Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
@@ -91,6 +101,7 @@ function Update_Display() {
 Update_Display();
 // This section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
+// Adds a click event to the buttons in the calculator-keys class
 keys.addEventListener('click', (event) => {
     // The target variable is an object that represents the element
     // that was clicked
@@ -99,13 +110,18 @@ keys.addEventListener('click', (event) => {
     if (!target.matches('button')) {
         return;
     }
-
+    // If target variable represents an operator, Handle_Operator function is called
+    // with the parameter 'Next_Operator' equal to the value of the target variable
+    // then update display function is called
     if (target.classList.contains('operator')) {
         Handle_Operator(target.value);
         Update_Display();
         return;
     }
 
+    // If the target variable represents a decimal, the Input_Decimal function is called
+    // and the dot parameter is equal to '.'
+    // Then update display function is called
     if (target.classList.contains('decimal')) {
         Input_Decimal(target.value);
         Update_Display();
