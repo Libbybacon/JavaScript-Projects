@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: tomato;
+    text-shadow: 3px 3px 3px whitesmoke;
+}
+
+h3 {
+    font-size: 35px;
+    color: chartreuse;
+    font-weight: bold;
+}
+
+#btnOrder {
+    text-align: center;
+    margin-left: 42%;
+    margin-top: 2%;
+    border-radius: 8px;
+    height: 80px;
+    width: 160px;
+    font-size: 25px;
+    background-color: wheat;
+    color: tomato;
+    text-shadow: 1px 1px 2px brown;
+
+}
+
+.menu {
+    width: 60%;
+    height: 1200px;
+    margin: 20px auto;
+    background-color: teal;
+    border-radius: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    height: fit-content;
+    font-size: 23px;
+    vertical-align: middle;
+    margin: 20px auto;
+    color: silver;
+}
+.left {
+    padding: 40px
+}
+
+
+
+
+.row:after {
+    content: ";";
+    display: table;
+    clear:both;
+
+}
+#cart {
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+    
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float:right;
+   
+
+}
