@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+
+    <script>
+        $(document).ready(function(){
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Now you see me...</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>This is purple</p>\
+                            <p id='3'>Click for a surprise!</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("div").css("text-align", "center");
+            $("h1").css({"font-family":"cursive", "color":"green"});
+            $("#2").css({"color":"purple"});
+            $('#3').one("click", firstClick);
+                function firstClick() {
+                    console.log("Paragraph 3 was clicked for the first time");
+                    $(this).click(function() {console.log("This has already been clicked!");
+                });
+                }
+            $("#3").click(function() {
+                $('h1',).fadeOut(1000);
+                $('#1').text("Where did the heading go????");
+                $('#1').css({"font-weight": "bold", "color":"red"});
+
+            });
+        });
+    </script> 
+</html>
