@@ -13,6 +13,7 @@
     bottom: 23px;
     right: 28px;
     width: 280px;
+    height: 100px;
 }
 .popup {
     display: none;
@@ -47,4 +48,32 @@
 
 .form-container .cancel {
     background-color: red;
+}
+
+.animate {
+    width: 200px;
+    height: 200px;
+    background: purple;
+    position: relative;
+    animation: moving 2s infinite;
+}
+
+@keyframes moving {
+    from {right: 0px;}
+    to {left: 500px;}
+}
+
+@keyframes zoominoutbunny {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+.bunny img {
+    animation: zoominoutbunny 15s forwards;
 }
