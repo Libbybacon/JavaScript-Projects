@@ -232,3 +232,7 @@ function resetGame() {
     selectedSquares = [];
 }
 
+window.onload = function () {
+    document.getElementById("body").removeClass('fade-out');
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Final_practice.css">
+    <script src="Final_practice.js"></script>
+    
+</head>
+<body>
+
+    <form name="signup" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"/><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"/><br>
+        <label for="number">Phone number:</label><br>
+        <input type="text" id="number" name="number"/><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"/><br>
+        <input type="submit" id="submit" value="Submit"/>
+
+    </form>
+
+    <p>click button at bottom of page</p>
+    <button class="open-button" onclick="openForm()">Popup</button>
+    <div class="popup" id="popForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Contact Info</h1>
+            
+            <label for="fristname">First name:</label><br>
+            <input type="text" id="firstname" name="firstname"/><br>
+            <label for="lastname">Last name:</label><br>
+            <input type="text" id="lastname" name="lastname"/><br>
+            <label for="Pnumber">Phone number:</label><br>
+            <input type="text" id="Pnumber" name="Pnumber"/><br>
+            <label for="e-mail">Email:</label><br>
+            <input type="text" id="e-mail" name="e-mail"/><br>
+            <input type="submit" id="submit" value="Submit"/>
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
