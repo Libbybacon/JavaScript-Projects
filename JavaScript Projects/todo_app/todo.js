@@ -38,12 +38,17 @@ function show() {
     // Displays task to the list in order it is inputed
     for (var i = 0; i < todos.length; i++) {
         // Also displays task as list and creates button w/ "x"
-        html +='<ul>' +  '<button class="remove" id="' + i + '">x</button>' + todos[i] + '</li>';
+        html +='<li>' +  '<button class="remove" id="' + todos[i] + '">x</button>' + todos[i] + '</li>';
 
     };
     html += '</ul>';
     // Displays task as list
     document.getElementById("todos").innerHTML = html;
+
+    var buttons = document.getElementsByClassName("remove");
+    for (var i=0; i< buttons.length; i++) {
+        buttons[i].addEventListener("click", closeTask);
+    };
 
 }
 
@@ -51,3 +56,18 @@ function show() {
 document.getElementById("add").addEventListener('click', add);
 // Keeps inputs displayed permanently on screen
 show();
+
+
+function closeTask() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    show();
+
+    return false;
+}
+
+
+
+

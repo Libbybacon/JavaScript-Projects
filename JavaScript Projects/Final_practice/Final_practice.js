@@ -58,3 +58,7 @@ localStorage.setItem("age", 4);
 document.getElementById("dog").innerHTML = localStorage.getItem("breed");
 
 
+function turnGreen() {
+    document.getElementById("green").style.color = "green";
+}
+

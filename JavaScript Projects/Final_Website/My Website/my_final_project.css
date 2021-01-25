@@ -1,0 +1,490 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+    opacity: 1;
+    transition: 1s opacity;
+    letter-spacing: .2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5vw;
+}
+
+body.fade-out {
+    opacity: .1;
+    transition: none;
+}
+
+        
+h1 {                                
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 5%;                     
+    color: #4e5856;
+    
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+q {
+    font-style: italic;
+    font-size: 2.3vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    letter-spacing: .1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #4e5856;
+    text-shadow: 2px 2px 5px#b2c3c0;
+}
+
+.intro {
+    font-size: 2vw;
+    text-align: center;
+
+
+}
+p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #4e5856;
+    text-shadow: 2px 2px 5px#b2c3c0;
+}
+
+p:hover {
+    transition: transform .5s;
+    transform: scale(1.05);
+}
+
+.center {
+    text-align: center;
+}
+             
+#office {
+    filter: sepia(50%);
+    border-radius: 12px;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto auto auto auto;
+}
+
+#office:hover {
+    filter: saturate(100%);
+    transition: transform 1s;
+    transform:scale(1.03);
+}
+
+/*=====================================
+            * NAVBAR STYLE *
+======================================*/
+
+.navbar {
+    overflow: hidden; 
+    background-color: #927aab;
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4vw;
+    z-index: 2;
+    -webkit-animation: moveNav 3s; /*moveNav animation for Safari*/
+    animation: moveNav 3s; /*speed of moveNav animation in other browswers*/
+}
+
+/*-----NAVBAR LINKS-----*/
+.navbar a {
+    float: left;
+    display: block;
+    color:#f5e691;
+    padding: .75vw ;
+    height: 4vw;
+    text-decoration: none;
+    font-size: 1.7vw;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 2px darkslategray;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNav Text 3s;
+    animation: moveNavText 3s;
+    letter-spacing: .2vw;
+}
+
+/*movNav animation-navbar comes in from left*/
+@keyframes moveNav {
+    from {right: -100vw;}
+    to {right: 0vw;}
+}
+
+/*animation moves navbar text from above into place*/
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* settings for screens<577px */
+@media screen and (max-width: 576px) {     /* Not Same */
+    .Navbar a {
+        width: 25%; 
+        font-size: 1.5vw;
+    }
+}
+
+/* navbar hover */
+.navbar a:hover {
+    background-color:#3d075c ;
+    color: #f5e103 ;
+    font-weight:bolder;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.navbar a.active {
+    background-color: #cdc3d6;
+}
+
+/*----------END NAVBAR STYLE-----------*/
+
+/*======================================
+        * BACKGROUND VIDEO STYLE *
+=======================================*/
+#home_video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* settings for screens < 577px */
+@media screen and (max-width: 576px) {
+    #home_video {
+        display: none;
+    }
+}
+
+/* Text overlay style */
+.video_text {
+    background:rgba(95, 55, 121, 0.05) ;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px silver;
+    width: 100%;
+    padding: 20px;
+    position:relative;
+    -webkit-animation: moveVideoText 5s;
+    animation: moveVideoText 5s;
+    height: 45vw;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw}
+    to {top: 0vw;}
+    
+}
+
+/*---END BACKGROUND  VIDEO STYLE----*/
+
+/*==================================
+           SLIDESHOW
+===================================*/
+#slideshow_background {
+    background: rgba(255,255,255, 0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+#slideshow_container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+.slide_show_images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: auto;
+    background-color: white;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkslategray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+}
+
+.text {
+    color: #f5e691;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .1vw; 
+    font-size: 1.1vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+  }
+
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+    }
+  
+  
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+  } 
+ 
+
+.active, .dot:hover {
+    background-color: #3d075c;
+}  
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;  
+  }
+
+/*-------- END SLIDESHOW ----------*/  
+
+/*==================================
+           TABLE STYLE
+===================================*/
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    padding-top: 0%;
+    height: 28vw;
+    background-image: url("Images/white.jpg");
+    background-color:#e1d9e7;
+}
+
+/* settings for screens < 577px */
+@media screen and (max-width: 576px) {
+    .column_1 {
+        overflow: auto; 
+    }
+}
+
+.column_2 {
+    float:left;
+    width:50%;
+    padding: 1.6%;
+    padding-top: 1.4%;
+    height: 28vw;
+    background-image:url("Images/purple.png");
+    
+}
+
+
+
+.column_3 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    padding-top: 5%;
+    height: 28vw;
+    background-image: url("Images/white.jpg");
+    background-color:#e1d9e7;
+}
+
+.column_4 {
+    float: left; 
+    width:50%;
+    padding: 1.6%;
+    padding-top: 1.4%;
+    height: 28vw;
+    background-image: url("Images/purple.png");
+    background-color: #5e4176 ;
+
+}
+
+.column_5 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    padding-top: 0%;
+    height: 33vw;   
+    color:darkslategray;
+    font-size: 1.2vw;
+}
+
+.column_tall {
+    padding-top: 2%;
+    height: 32vw;
+    color: darkslategray;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*---------END TABLE STYLE---------*/
+
+/*==================================
+        CONTACT FORM STYLE
+===================================*/
+.form-popup {
+    border: 3px solid #f5e691;
+    z-index: 8;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    bottom: 0.5vw;
+    right: 0.5vw;
+}
+
+.form-container {
+    border-radius: 7px;
+    max-width: 30vw;
+    padding: 1vw;
+    background-color: #cdc3d6;
+    color: darkslategray;
+  }
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 1.5vw 0;
+    border: 1px solid #f4e8a1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1vw; 
+    border-radius: 12px;
+  } 
+
+    /* submit */
+.form-container .btn {
+    background-color: #3d075c;
+    color: #f4e8a1;
+    border-radius: 6px;
+    border-color: #3d075c;
+    border-style: outset;
+    margin-bottom: 1vw;
+    width: 8vw;
+    height: 4vw;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+    /* close */
+.form-container .cancel {
+    background-color: #927aab;
+    color: #f4e8a1;
+    border-color: #927aab;
+}
+
+.form-container .submit {
+    margin-left: 10vw;
+}
+
+.Pop_Up_Button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .3vw;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 10%;
+    height: auto;
+   
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    
+}
+
+
+
+
+/*-------END CONTACT STYLE---------*/
+
+/*==================================
+            FOOTER STYLE
+===================================*/
+.wrapper {
+    min-height: 100%;
+    margin: 0 auto -5vw;
+}
+
+footer {
+    margin-top: 4vw;
+    padding-top: 1vw;
+    background-color: #e1dfd5;
+    text-align: center;
+    height: 6vw;
+}

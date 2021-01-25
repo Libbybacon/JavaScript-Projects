@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-------------HEAD---------->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Final Project</title>
+    <link rel="stylesheet" type="text/css" href="my_final_project.css">
+</head>
+
+<!--------START BODY------>
+<body>
+
+<!------------NAV BAR------------>
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#github">Github</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+
+<!------------BACKGROUND VIDEO--------->
+    <div id="home">
+        <video autoplay muted loop id="home_video">
+            <source src="abstract_line2.mp4" type="video/mp4">
+        </video>
+
+
+<!---------Video text overlay---------->
+    <div class="video_text">
+        <h1 class="white-text">Libby's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q> I like my job because it involves learning. I like being around smart people who are trying to figure out new things. 
+                    <br>I like the fact that if people really try they can figure out how to invent things that actually have an impact.
+                </q>  
+                <br>-Bill Gates
+                <br>
+                <br> My name is Libby Bacon, and I've created this website to give you an introduction
+                <br> to my background and experience in computer programming.
+                <br>
+                <br>
+            </p>
+        </strong>
+        </div>
+    </div>
+
+<!------------ABOUT SECTION------------->
+    <div class="row" id="about">
+        <!--Left Column-->
+        <div class="column_2">
+            <img src="home-office-1867761_640.jpg" alt="home office">
+        </div>
+        <!--Right Column-->
+        <div class="column_1">
+            <h1>About</h1>
+            <p>
+                I am currently training to be a full-stack developer through 
+                <br><a href="https://www.learncodinganywhere.com">The Tech Academy</a>'s software developer bootcamp.
+                <br>
+                 <br>At the end of my training, I will have gained experience working in HTML & CSS,
+                  JavaScript, C#, Python and more.
+                <br>
+                <br> I am looking forward to a career as a back-end software developer!
+                <br> 
+                <br>Please <a href="#contact">contact</a> me below if you have further questions.
+            </p>
+        </div>
+    </div> 
+
+<!-----------GITHUB SECTION------------->
+    <div class="row" id="github">
+      <!--Left Column-->
+        <div class="column_1">
+            <h1>GitHub</h1>
+            <p class="center">
+                Here is a link to my GitHub profile where you can view all of my coding projects:
+                <br>
+                <p class="center"><a href="https://github.com/Libbybacon" target="blank">Libby Bacon's GitHub</a></p>
+            </p>
+        </div>
+
+        <!--Right Column-->
+        <div class="column_2">
+             <a href="https://github.com/Libbybacon" target="_blank"><img src="GitHub-Mark-120px-plus.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+<!---------CONTACT SECTION----------->
+    <div class="row" id="contact">
+   
+        <!--Contact Image, Left Column-->
+        <div class="column_2 column_tall">
+            <img src="q-and-a-2453376_640.jpg" alt="">
+        </div>
+
+        <!--Contact Form, Right Column-->
+        <div class="column_1 column_tall">
+            <h1>Contact</h1>
+
+            <form action="https://formspree.io/f/xaylaeqb" method="POST">
+                <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here.">
+                <label>Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Please enter your email here.">
+                <label>Message:</label>
+                    <input type="text" id="message" name="message" placeholder="Please write your message here.">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+<!--------FOOTER SECTION--------->
+    <footer>
+        <p>
+            <p class="center">&copy;2021 Libby Bacon</p>
+            <br>
+        </p>
+    </footer>
+
+
+</body>
+</html>

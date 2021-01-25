@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-------------HEAD---------->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="my_final_project.css">
+    <script src="JS/final.js" type="text/javascript"></script>
+</head>
+
+<!---- BODY ---->
+<body class="background">
+  <div class="wrapper">
+<!--- NAV BAR --->
+    <div class="navbar">
+        <a class="tab active" href="#home">Home</a>
+        <a class="tab" href="#slideshow">Slideshow</a>
+        <a class="tab" href="#about">About</a>
+        <a class="tab" href="#github">GitHub</a>
+        <a class="tab" href="#recentProjects">Projects</a>
+        <!-- Make openForm function run when we click Contact on navbar -->
+        <a class="tab" onclick="openForm()" ondblclick="closeForm()">Contact</a>
+    </div>
+
+<!----- HOME ----->
+    <div id="home">
+        <br>
+        <br>
+
+    <!--- VIDEO --->    
+        <video autoplay muted loop id="home_video">
+            <source src="images/abstract_line2.mp4" type="video/mp4">
+            Your browser does not support this HTML5 video.
+        </video>
+    </div>
+
+<!--- VIDEO TEXT --->
+    <div class="video_text">
+        <h1 class="white-text">Libby's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <br>
+                <q> I like my job because it involves learning. I like being around smart people who are trying to figure out new things. 
+                    <br>I like the fact that if people really try they can figure out how to invent things that actually have an impact.
+                </q>  
+                <br>-Bill Gates
+                <br>
+                <br>
+                <p class="intro"> My name is Libby Bacon, and I've created this website to give you an introduction
+                <br> to my background and experience in computer programming.
+                <br>
+                <br>
+            </p>
+        </strong>
+    </div>
+
+<!---- SLIDESHOW ---->
+    <div id="slideshow">
+        <div id="slideshow_background">
+            <div id="slideshow_container">
+
+                <div class="mySlides fade">
+                  <div class="Slide_Number">1 /6</div>
+                    <img class="slide_show_images" src="Images/IMG_5679.jpg" alt="Me" style="width: 100%;">
+                      <div class="text">I am an outdoor-enthusiast with a passion for solving puzzles. <br>  
+                        I look forward to bringing my problem-solving skills to a career in technology,
+                        and am available to help you with your project!
+                      </div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="Slide_Number">2 /6</div>
+                    <img class="slide_show_images" src="Images/html.jpg" style="width: 100%;">
+                      <div class="text"><br>I have completed entry-level training in HTML, CSS and JavaScript<br><br></div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="Slide_Number">3 /6</div>
+                    <img class="slide_show_images" src="Images/database2.png" style="width: 100%;">
+                      <div class="text"><br>Next I will move on to learning about databases as well as the programming language SQL<br><br></div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="Slide_Number">4 /6</div>
+                    <img class="slide_show_images" src="Images/csharp.png" style="width: 100%;">
+                      <div class="text"><br>Later I will learn C# and the .NET framework<br>></div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="Slide_Number">5 /6</div>
+                    <img class="slide_show_images" src="Images/python.png" style="width: 100%;">
+                      <div class="text"><br>As well as python!<br><br></div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="Slide_Number">6 /6</div>
+                    <img class="slide_show_images" src="Images/keyboard.jpg" style="width: 100%;">
+                      <div class="text">
+                          <a onclick="openForm()" href="#contact" style="color:#cdc3d6; font-size: 2vw" >Contact me now!<br></a>
+                      </div>
+                </div>
+
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+        <br>
+
+            <div style="text-align: center;">
+            
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+
+            </div>
+        </div>
+    </div>
+    
+
+<!------ ABOUT ------>
+    <div class="row" id="about">
+        <!--Left Column-->
+        <div class="column_2">
+            <img id="office" src="Images/Office2.jpg" alt="home office">
+        </div>
+        <!--Right Column-->
+        <div class="column_1">
+            <div class="overlay">
+            <h1>About</h1>
+            <p>
+                I am currently training to be a full-stack developer through 
+                <br><a href="https://www.learncodinganywhere.com">The Tech Academy</a>'s software developer bootcamp.
+                <br>
+                 <br>At the end of my training, I will have gained experience working in HTML & CSS,
+                  JavaScript, C#, Python and more.
+                <br>
+                <br> I am looking forward to a career as a back-end software developer!
+                <br> 
+                <br>Please <a href="#contact">contact</a> me below if you have further questions.
+            </p>
+            </div>
+        </div>
+    </div> 
+
+<!----- GITHUB ----->
+    <div class="row" id="github">
+      <!--Left Column-->
+        <div class="column_3">
+            <h1>GitHub</h1>
+            <p class="center">
+                Here is a link to my GitHub profile where you can view all of my coding projects:
+                <br><br>
+                <a href="https://github.com/Libbybacon" target="blank">Libby Bacon's GitHub</a>
+            </p>
+        </div>
+
+        <!--Right Column-->
+        <div class="column_4">
+             <a href="https://github.com/Libbybacon" target="_blank"><img id="office" src="Images/GitHub-Mark-120px-plus.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+<!----- PROJECTS ----->
+    <div class="row" id="recentProjects">
+   
+        <!--Contact Image, Left Column-->
+        <div class="column_2 column_tall">
+            <img id="office" src="Images/office3.jpg" alt="office2">
+            
+        </div>
+
+        <!--Links to projects, Right Column-->
+        <div class="column_5">
+            <h1>Recent Projects:</h1>
+            <ul>
+                <li> This one-page website was built using bootstrap 4. It includes a jumbotron,
+                    cards, badges, and a pop-up form among other things.  I used a tropical island
+                    resort named after my dog Phoenix as  the theme.  
+                    <a href="St. Phoenix/St_Phoenix.html" target="_blank">St. Phoenix</a>
+                </li>
+                <br>
+                <li>This one-page website was built with HTML, CSS and JavaScript.  I used a faux-adventure
+                    company as the theme, and included my own pictures taken in the Pacific northwest.  The
+                    page includes an interactive lightbox slideshow, embeded videos, and navigation links. 
+                    <a href="Explore the PNW/one_page_website.html" target="_blank">Explore the PNW</a>
+                </li>
+                <br>
+                <li>My first JavaScript game!  Play "dogs and bunnies" against the computer.
+                    <a href="Tic Tac Toe/TicTacToe.html" target="_blank">Play Dogs v Bunnies</a> 
+                </li>
+                <br>
+                <li>Here is a basic working calculator built with HTML, CSS, and Javascript.
+                    <a href="Calculator/calculator.html" target="_blank">Calculator</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+<!----- CONTACT ---->
+    <div id="contact">
+      <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+        <div class="form-popup" id="myForm">
+          <form action="https://formspree.io/libbybacon@gmail.com" method="POST" class="form-container">
+          <h1>Contact</h1>
+              <label for="name"><b>Full Name:</b></label>
+                <input type="text" placeholder="Please enter your full name" name="name" required>
+              <label for="phone"><b>Phone:</b></label>
+                <input type="text" placeholder="Please enter your phone number" name="phone">
+              <label for="email"><b>Email:</b></label>  
+                <input type="text" placeholder="Please enter your email address" name="email" required>
+			  <label for="message"><b>Message:</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+                
+        <button type="submit" class="btn submit">SUBMIT</button>   
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>  
+           
+          </form> 
+        </div>
+    </div>
+  </div>
+<!----- FOOTER ----->
+    <footer>
+        <p class="center">&copy;2021 Libby Bacon</p>
+    </footer>
+
+    <script src="final.js"></script>
+</body>
+</html>
